@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+/*
+ * Copyright (c) 2017 Columbia University.
+ * Network Security Lab, Columbia University, New York, NY, USA
+ *
+ * This file is part of HVLearn Project, https://github.com/HVLearn/.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ */
+-->
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+    <parent>
+	<groupId>org.learner</groupId>
+	<artifactId>dfa_learner</artifactId>
+	<version>1.0-SNAPSHOT</version>
+    </parent>
+
+	<groupId>org.learner</groupId>
+	<artifactId>core</artifactId>
+    <version>1.0</version>
+	<packaging>jar</packaging>
+
+
+	<properties>
+		<!-- AutomataLib requires Java 8 -->
+		<maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+
+
+		<!-- Version of LearnLib to use -->
+		<learnlib.version>0.12.0</learnlib.version>
+
+        <!-- Version of AutomataLib to use -->
+        <automatalib.version>0.6.0</automatalib.version>
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>de.learnlib</groupId>
+				<artifactId>learnlib-parent</artifactId>
+				<version>${learnlib.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+
+            <!--
+            <dependency>
+                <groupId>net.automatalib</groupId>
+                <artifactId>automata-parent</artifactId>
+                <version>${automatalib.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            -->
+		</dependencies>
+	</dependencyManagement>
+
+
+    <dependencies>
+        <dependency>
+            <groupId>de.learnlib</groupId>
+            <artifactId>learnlib-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>de.learnlib</groupId>
+            <artifactId>learnlib-kearns-vazirani</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>de.learnlib</groupId>
+            <artifactId>learnlib-basic-eqtests</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>de.learnlib</groupId>
+			<artifactId>learnlib-cache</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>de.learnlib</groupId>
+			<artifactId>learnlib-parallelism</artifactId>
+		</dependency>
+        <dependency>
+            <groupId>de.learnlib</groupId>
+            <artifactId>learnlib-acex</artifactId>
+        </dependency>
+
+        <!--
+		<dependency>
+			<groupId>de.learnlib</groupId>
+			<artifactId>learnlib-counterexamples</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>de.learnlib</groupId>
+			<artifactId>learnlib-simulator</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>de.learnlib</groupId>
+			<artifactId>learnlib-lstar-generic</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>de.learnlib</groupId>
+			<artifactId>learnlib-lstar-baseline</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>de.learnlib</groupId>
+			<artifactId>learnlib-dhc</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>de.learnlib</groupId>
+			<artifactId>learnlib-mapper</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>de.learnlib</groupId>
+			<artifactId>learnlib-drivers-basic</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>de.learnlib</groupId>
+			<artifactId>learnlib-discrimination-tree</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>de.learnlib</groupId>
+			<artifactId>learnlib-ttt</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>de.learnlib.testsupport</groupId>
+			<artifactId>learnlib-learning-examples</artifactId>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>net.automatalib</groupId>
+			<artifactId>automata-jung-visualizer</artifactId>
+			<scope>runtime</scope>
+        </dependency>
+        -->
+
+        <dependency>
+            <groupId>net.automatalib</groupId>
+            <artifactId>automata-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>net.automatalib</groupId>
+            <artifactId>automata-brics</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>net.automatalib</groupId>
+            <artifactId>automata-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>net.automatalib</groupId>
+            <artifactId>automata-util</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>net.automatalib</groupId>
+            <artifactId>automata-commons-util</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>net.automatalib</groupId>
+            <artifactId>automata-serialization-core</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>dk.brics.automaton</groupId>
+            <artifactId>automaton</artifactId>
+        </dependency>
+	</dependencies>
+
+</project>
+

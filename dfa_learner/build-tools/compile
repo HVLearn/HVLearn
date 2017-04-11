@@ -1,0 +1,21 @@
+#!/bin/bash
+
+PACKAGE=org.learner
+
+SSL_ROOT=../ssl
+
+CLASS_PATH=./core/target/classes:./learners/target/classes
+HEADER_PATH=$SSL_ROOT/utils
+
+mvn -q compile
+mvn -q install
+
+javah -classpath $CLASS_PATH -o $HEADER_PATH/jni_initcert.h -jni $PACKAGE.core.CertificateTemplate
+javah -classpath $CLASS_PATH -o $HEADER_PATH/jni_verifier.h -jni $PACKAGE.learners.JNIVerifier
+
+# Compile SSL/TLS libraries
+#make -C $SSL_ROOT/openssl
+make -C $SSL_ROOT/gnutls
+#make -C $SSL_ROOT/mbedtls
+#make -C $SSL_ROOT/matrixssl
+#make -C $SSL_ROOT/curl
