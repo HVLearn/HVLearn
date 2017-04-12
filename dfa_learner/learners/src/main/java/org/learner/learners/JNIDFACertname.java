@@ -66,8 +66,8 @@ public class JNIDFACertname {
 
         File alphabetFile   = new File("../example-inputs/alphabets");
         File nameFile       = new File("../example-inputs/certname");
-        //int idType          = CertificateTemplate.ID_TYPE_NONE; // Common name
-        int idType          = CertificateTemplate.ID_TYPE_EMAIL; // Email
+        int idType          = CertificateTemplate.ID_TYPE_NONE; // Common name
+        //int idType          = CertificateTemplate.ID_TYPE_EMAIL; // Email
         String libName      = args[0];
 
 

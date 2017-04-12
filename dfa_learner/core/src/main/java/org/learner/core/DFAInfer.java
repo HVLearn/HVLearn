@@ -197,6 +197,17 @@ public class DFAInfer {
         logFile = logFile.replace('*', 's');
         logFile = logFile.replace('.', '_');
 
+        if (this.idType == CertificateTemplate.ID_TYPE_NONE) {
+            logFile = logFile + "_CN";
+        } else if (this.idType == CertificateTemplate.ID_TYPE_DNS) {
+            logFile = logFile + "_DNS";
+        } else if (this.idType == CertificateTemplate.ID_TYPE_IPADDR) {
+            logFile = logFile + "_IP";
+        } else if (this.idType == CertificateTemplate.ID_TYPE_EMAIL) {
+            logFile = logFile + "_EMAIL";
+        }
+
+
         File logPrefix = new File(this.logPath, logFile);
         return logPrefix.getAbsolutePath();
     }
