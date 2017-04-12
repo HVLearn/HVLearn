@@ -1,16 +1,26 @@
 <h1>HVLearn</h1>
-<p>
-HVLearn is an open-source tool/framework for analyzing hostname verification in SSL/TLS implementations using automata learning.
-It is good for finding bugs, vulnerabilities and RFC discrepancies in implementations. The core of this project
-is written in Java and mainly implemented with <a href="https://learnlib.de/">LearnLib</a> project. Some parts of the code are written in C, particularly for generating certificate template.
+<p> HVLearn is an open-source tool/framework for analyzing hostname
+verification in SSL/TLS implementations using automata learning.  It is good
+for finding bugs, vulnerabilities and RFC discrepancies in implementations. The
+core of this project is written in Java and mainly implemented with <a
+href="https://learnlib.de/">LearnLib</a> project. Some parts of the code are
+written in C, particularly for generating certificate template.
 </p>
 
 <p>
-Given a specific pattern of certificate identifier (e.g., common name and subject alternative name fields), HVLearn uses automata learning algorithms to infer a Deterministic Finite Automaton (DFA) that describes the set of all hostnames that match the given certificate identifier. The output inferred DFA can be compared to DFAs from different implementations to find discrepancies or performed an equivalence test against a DFA which is derived from any regular expression as an expected rule.
+Given a specific pattern of certificate identifier (e.g., common name and
+subject alternative name fields), HVLearn uses automata learning
+algorithms to infer a Deterministic Finite Automaton (DFA) that describes the
+set of all hostnames that match the given certificate identifier. The output
+inferred DFA can be compared to DFAs from different implementations to find
+discrepancies or performed an equivalence test against a DFA which is derived
+from any regular expression as an expected rule.
 </p>
 
 <p> For more detail about algorithm and evaluation, see our paper:<br />
-<b>HVLearn: Automated Black-box Analysis of Hostname Verification in SSL/TLS Implementations </b><a href="https://github.com/HVLearn/HVLearn/raw/master/HVLearn.pdf">[PDF]</a><br />
+<b>HVLearn: Automated Black-box Analysis of Hostname Verification in SSL/TLS
+Implementations </b>
+<a href="https://github.com/HVLearn/HVLearn/raw/master/HVLearn.pdf">[PDF]</a><br />
 Suphannee Sivakorn, George Argyros, Kexin Pei, Angelos D. Keromytis and Suman Jana
 </p>
 
