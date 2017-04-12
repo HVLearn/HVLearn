@@ -134,8 +134,6 @@ public class DFAHostname extends DFAInfer {
         List<Character> customQuery = stringToQuery(possibleAcceptedString);
         dfa_qresult = learner.getHypothesisModel().accepts(customQuery);
 
-        System.out.println(dfa_qresult);
-
         long q  = queryCounter.getStatisticalData().getCount();
         //long q1 = learnerQueryCounter.getStatisticalData().getCount();
 

@@ -1,0 +1,27 @@
+#!/bin/bash
+
+MODULE=learners                     # Learner Module
+PACKAGE=org.learner.${MODULE}       # Package name
+SSL_ROOT=../../ssl                  # SSL root path
+
+MAX_INIT_MEM=1024m
+MAX_ALLOC_MEM=10g
+
+MAIN=JNIDFACertname                 # Main class
+#GNUTLS=${SSL_ROOT}/gnutls/         # GnuTLS path
+
+LIBRARY=$1
+ARGS="$@"
+
+
+cd ${MODULE}
+
+# Export maven option and include JNI java library path
+export MAVEN_OPTS="-Xms$MAX_INIT_MEM \
+                   -Xmx$MAX_ALLOC_MEM \
+                   -Djava.library.path=${SSL_ROOT}/${LIBRARY}"
+
+# Maven execute
+mvn -q -e exec:java -Dexec.mainClass="$PACKAGE.$MAIN" -Dexec.args="${ARGS}"
+
+cd -

@@ -10,8 +10,8 @@ mvn -q clean
 rm $HEADER_PATH/jni_initcert.h
 rm $HEADER_PATH/jni_verifier.h
 
-make -C $SSL_ROOT/openssl clean
+#make -C $SSL_ROOT/openssl clean
 make -C $SSL_ROOT/gnutls clean
-make -C $SSL_ROOT/mbedtls clean
-make -C $SSL_ROOT/matrixssl clean
-make -C $SSL_ROOT/curl clean
+#make -C $SSL_ROOT/mbedtls clean
+#make -C $SSL_ROOT/matrixssl clean
+#make -C $SSL_ROOT/curl clean
