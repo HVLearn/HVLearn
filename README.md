@@ -24,15 +24,15 @@ Implementations </b>
 Suphannee Sivakorn, George Argyros, Kexin Pei, Angelos D. Keromytis and Suman Jana
 </p>
 
+<p><b>Want to try?</b> Please refer to our <a href="https://github.com/HVLearn/HVLearn/wiki">Wiki</a> page for setting up instruction and framework implementation.</p>
+
 <p>
 HVLearn is developed at Columbia University, New York, NY, USA in 2016-2017.
-</p>
-<p>
-<b>The document/project wiki will be available soon!</b>
 </p>
 
 <h2>Useful Resources</h2>
 <ul>
+<li><b><a href="https://github.com/HVLearn/HVLearn/wiki">HVLearn Project Wiki</a></b>
 <li><a href="https://maven.apache.org/">Apache Maven</a></li>
 <li><a href="https://www.gnutls.org/">GnuTLS</a></li>
 </ul>
