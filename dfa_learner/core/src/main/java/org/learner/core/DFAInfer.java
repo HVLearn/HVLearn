@@ -228,8 +228,6 @@ public class DFAInfer {
             }
         }
 
-        // Exact name given
-        set.add(noIdName);
         possibleAcceptedStrings.addAll(set);
         return possibleAcceptedStrings;
 

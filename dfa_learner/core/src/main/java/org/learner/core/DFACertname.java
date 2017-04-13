@@ -120,6 +120,7 @@ public class DFACertname extends DFAInfer {
         while (iter.hasNext() && !sul_qresult) {
             possibleAcceptedString = iter.next();
             sul_qresult = this.idVerifier.verify(possibleAcceptedString, this.idType) == 1 ? true : false;
+            //System.out.println(possibleAcceptedString + ": " + sul_qresult);
         }
 
         List<Character> customQuery = stringToQuery(possibleAcceptedString);
