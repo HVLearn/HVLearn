@@ -24,7 +24,10 @@ Implementations </b>
 Suphannee Sivakorn, George Argyros, Kexin Pei, Angelos D. Keromytis and Suman Jana
 </p>
 
-<p><b>Want to try?</b> Please refer to our <a href="https://github.com/HVLearn/HVLearn/wiki">Wiki</a> page for setting up instruction and framework implementation.</p>
+<p><b>Want to try?</b> Please refer to our <a href="https://github.com/HVLearn/HVLearn/wiki">Wiki</a> page for setting up instruction and framework implementation.
+Look for certificate templates we have used in testing, they are in
+```CERT_TEMPLATE``` directory.
+</p>
 
 <p>
 HVLearn is developed at Columbia University, New York, NY, USA in 2016-2017.
