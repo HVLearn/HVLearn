@@ -25,8 +25,7 @@ Suphannee Sivakorn, George Argyros, Kexin Pei, Angelos D. Keromytis and Suman Ja
 </p>
 
 <p><b>Want to try?</b> Please refer to our <a href="https://github.com/HVLearn/HVLearn/wiki">Wiki</a> page for setting up instruction and framework implementation.
-Look for certificate templates we have used in testing, they are in
-```CERT_TEMPLATE``` directory.
+Look for certificate templates we have used in testing, they are in our <a href="https://github.com/HVLearn/HVLearn/tree/master/CERT_TEMPLATES">CERT_TEMPLATES</a> directory.
 </p>
 
 <p>
