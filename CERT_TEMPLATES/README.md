@@ -1,6 +1,6 @@
 <h1>Certificate Templates</h1>
 Here are the list of certificate templates we have used in our testing
-frameworks.  This list contains 41 certificate templates (23 from templates
+framework.  This list contains 41 certificate templates (23 from templates
 from the paper originally and some updated templates we just added).
 All the certificates are self-signed and only be used for testing purpose.
 
@@ -11,6 +11,7 @@ Each template contains 3 files formatted as following:
  3. Certificate private key (.key)
 
 As the server identifier can present in common name (CN) and subject alternative name (SAN) (RFC 6125 https://tools.ietf.org/html/rfc6125), we also need to account those in testing. We format those in the .name file as following:
+
 When server identifier locates in 
 
  - **common name**,  the .name file contain no indication, just the identifier e.g., ```*.aaa.aaa```
